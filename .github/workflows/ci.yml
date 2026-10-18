@@ -30,7 +30,8 @@ jobs:
           python-version-file: .python-version
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v10
+        # setup-uv 没有 v10 浮动标签；固定到已审核的 v10.3.0 提交。
+        uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
         with:
           version: "0.12.20"
           enable-cache: true
